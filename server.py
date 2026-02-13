@@ -169,5 +169,5 @@ async def get_threat_entity(name: str) -> str:
     return "\n".join(output)
 
 if __name__ == "__main__":
-    # FastMCP expone el servidor SSE por defecto
-    mcp.run()
+    # Ejecutar en modo SSE para exponer el servidor HTTP (puerto 8000 por defecto)
+    mcp.run(transport="sse")
